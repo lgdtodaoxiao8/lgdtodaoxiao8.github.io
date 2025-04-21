@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь | Gurman</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Gurman</div>
+            <ul class="nav-list">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="recipes.html">Рецепты</a></li>
+                <li><a href="feedback.html">Обратная связь</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main interactive-page">
+        <!-- Блок с переключением контента -->
+        <div class="content-switcher">
+            <button class="switch-btn active" data-content="form">Написать нам</button>
+            <button class="switch-btn" data-content="faq">Частые вопросы</button>
+        </div>
+
+        <!-- Динамический контент -->
+        <div id="dynamic-content" class="dynamic-content">
+            <!-- Форма обратной связи -->
+            <form id="feedback-form" class="feedback-form show">
+                <h2>Форма обратной связи</h2>
+                
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message"></span>
+                </div>
+
+                <button type="submit" class="cta-button">Отправить</button>
+            </form>
+
+            <!-- Блок с FAQ -->
+            <div id="faq-content" class="faq-content">
+                <h2>Частые вопросы</h2>
+                <div class="faq-item">
+                    <div class="faq-question">Как опубликовать свой рецепт?
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">Отправьте нам свой рецепт через форму обратной связи, и мы рассмотрим его для публикации.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Гдe найти рецепт без глютена?
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">Используйте фильтры в разделе рецептов или наш поиск по сайту.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок с подтверждением отправки -->
+        <div id="confirmation" class="confirmation hidden">
+            <h2>Спасибо за ваше сообщение! 🎉</h2>
+            <p>Мы ответим вам в течение 24 часов.</p>
+            <button id="new-message-btn" class="cta-button">Написать новое сообщение</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>О нас</h4>
+                <p>Мы создаем кулинарные истории, которые вдохновляют</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p>email: hello@gurman.ru</p>
+                <p>тел: +7 (999) 123-45-67</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Соцсети</h4>
+                <div class="social-links">
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">📌 Pinterest</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
