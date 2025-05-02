@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить рецепт - Вкусные рецепты</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- Добавляем DOMPurify для безопасной обработки HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="recipes.html">Рецепты</a></li>
+                <li><a href="about.html">О блоге</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="submit-recipe.html">Добавить рецепт</a></li>
+                <li><a href="404.html">404</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Добавить свой рецепт</h1>
+        
+        <form id="recipe-form" action="/submit-recipe" method="POST">
+            <label for="recipe-name">Название рецепта:</label>
+            <input type="text" id="recipe-name" name="recipe-name" required>
+
+            <label for="ingredients">Ингредиенты:</label>
+            <textarea id="ingredients" name="ingredients" rows="5" required></textarea>
+
+            <label for="instructions">Инструкция приготовления:</label>
+            <textarea id="instructions" name="instructions" rows="10" required></textarea>
+
+            <label for="cooking-time">Время приготовления (в минутах):</label>
+            <input type="number" id="cooking-time" name="cooking-time" required>
+
+            <label for="difficulty">Сложность:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="easy">Легко</option>
+                <option value="medium">Средне</option>
+                <option value="hard">Сложно</option>
+            </select>
+
+            <label for="photo">Фото блюда:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
+            <button type="submit">Отправить рецепт</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Вкусные рецепты. Все права защищены.</p>
+    </footer>
+
+    <!-- Подключаем файлы JavaScript -->
+    <script src="js/security.js"></script>
+    <script src="js/main.min.js" defer></script>
+</body>
+</html>

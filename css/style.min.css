@@ -1,0 +1,242 @@
+/* Определение глобальных переменных для всего сайта */
+:root {
+    /* Основной цвет для акцентов и кнопок */
+    --primary: #ff6b6b;
+    /* Вторичный цвет для дополнительных элементов */
+    --secondary: #4ecdc4;
+    /* Цвет текста на сайте */
+    --text: #2d3436;
+    /* Цвет фона сайта */
+    --bg: #f9f9f9;
+    /* Белый цвет для карточек и элементов */
+    --white: #fff;
+    /* Максимальная ширина контента */
+    --max-w: 1200px;
+    /* Тень для карточек и элементов */
+    --shadow: 0 2px 5px rgba(0,0,0,.1);
+    /* Скругление углов */
+    --radius: 4px;
+    /* Время анимации */
+    --transition: .3s ease;
+}
+
+/* Сброс стилей и базовые настройки */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для body */
+body {
+    font: 16px/1.6 Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+/* Стили для основных структурных элементов */
+header, main, footer {
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Стили для закрепленной шапки сайта */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+/* Стили для навигационного меню */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+/* Стили для ссылок в навигации */
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+/* Эффект при наведении на ссылки */
+nav a:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Сетка для отображения рецептов */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Стили для карточек рецептов */
+article {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+/* Анимация при наведении на карточку */
+article:hover {
+    transform: translateY(-5px);
+}
+
+article img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+#kitchen {
+    margin-top: 1rem;
+}
+
+/* Стили для форм */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Общие стили для элементов форм */
+input, textarea, select, button {
+    padding: .5rem;
+    border-radius: var(--radius);
+    font-size: 1rem;
+}
+
+/* Стили для текстовых полей */
+input, textarea, select {
+    border: 1px solid #ddd;
+}
+
+/* Стили для кнопок */
+button {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* Эффект при наведении на кнопку */
+button:hover {
+    background: #ff5252;
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+}
+
+/* Стили для заголовков */
+h1, h2, h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Стили для сообщений об ошибках */
+.error-message {
+    color: red;
+    font-size: .8em;
+    margin-top: 5px;
+    animation: fadeIn var(--transition);
+}
+
+li {
+    list-style: none;
+}
+
+/* Стили для таблиц с характеристиками рецепта */
+.recipe-info {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse;
+    background: var(--bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.recipe-info th {
+    background: var(--primary);
+    color: var(--white);
+    text-align: left;
+    padding: 0.8rem;
+    font-weight: 500;
+}
+
+.recipe-info td {
+    padding: 0.8rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.recipe-info tr:last-child td {
+    border-bottom: none;
+}
+
+/* Стили для страницы 404 */
+.error-page {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.error-page h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+.error-page p {
+    margin: 20px 0;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--radius);
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background: #ff5252;
+}
+
+/* Адаптивный дизайн для планшетов */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Адаптивный дизайн для мобильных устройств */
+@media (max-width: 480px) {
+    body { font-size: 14px }
+    main { margin: 1rem auto }
+}

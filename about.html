@@ -1,0 +1,62 @@
+<!-- Указываем тип документа как HTML5 -->
+<!DOCTYPE html>
+<!-- Открываем тег html с указанием русского языка -->
+<html lang="ru">
+<head>
+    <!-- Кодировка страницы -->
+    <meta charset="UTF-8">
+    <!-- Настройка viewport для адаптивности -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы -->
+    <title>О блоге - Вкусные рецепты</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- Добавляем DOMPurify для безопасной обработки HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="recipes.html">Рецепты</a></li>
+                <li><a href="about.html">О блоге</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="submit-recipe.html">Добавить рецепт</a></li>
+                <li><a href="404.html">404</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Заголовок страницы -->
+        <h1>О блоге</h1>
+        
+        <!-- Секция с историей блога -->
+        <section>
+            <!-- Подзаголовок секции -->
+            <h2>Наша история</h2>
+            <!-- Описание блога -->
+            <p>Этот блог создан для всех любителей готовить. Здесь вы найдете простые и вкусные рецепты.</p>
+            
+            <!-- Контейнер для изображения с подписью -->
+            <figure>
+                <!-- Изображение кухни -->
+                <img src="images/kitchen.jpg" id="kitchen" alt="Кухня" width="500">
+                <!-- Подпись к изображению -->
+                <figcaption>Наша уютная кухня</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2025 Вкусные рецепты. Все права защищены.</p>
+    </footer>
+    <!-- Подключаем файлы JavaScript -->
+    <script src="js/security.js"></script>
+    <script src="js/main.min.js" defer></script>
+</body>
+</html>

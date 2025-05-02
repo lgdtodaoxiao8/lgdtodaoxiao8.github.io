@@ -1,0 +1,65 @@
+<!-- Указываем тип документа как HTML5 -->
+<!DOCTYPE html>
+<!-- Открываем тег html с указанием русского языка -->
+<html lang="ru">
+<head>
+    <!-- Кодировка страницы -->
+    <meta charset="UTF-8">
+    <!-- Настройка viewport для адаптивности -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы -->
+    <title>Контакты - Вкусные рецепты</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- Добавляем DOMPurify для безопасной обработки HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="recipes.html">Рецепты</a></li>
+                <li><a href="about.html">О блоге</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="submit-recipe.html">Добавить рецепт</a></li>
+                <li><a href="404.html">404</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Заголовок страницы -->
+        <h1>Свяжитесь с нами</h1>
+        
+        <!-- Контактная форма -->
+        <form id="contact-form" action="/submit-contact" method="POST">
+            <!-- Поле для имени -->
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Поле для email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Поле для сообщения -->
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <!-- Кнопка отправки -->
+            <button type="submit">Отправить</button>
+        </form>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2025 Вкусные рецепты. Все права защищены.</p>
+    </footer>
+    
+    <!-- Подключаем файлы JavaScript -->
+    <script src="js/security.js"></script>
+    <script src="js/main.min.js" defer></script>
+</body>
+</html>

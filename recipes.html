@@ -1,100 +1,209 @@
-﻿<!DOCTYPE html>
+<!-- Указываем тип документа как HTML5 -->
+<!DOCTYPE html>
+<!-- Открываем тег html с указанием русского языка -->
 <html lang="ru">
 <head>
+    <!-- Кодировка страницы -->
     <meta charset="UTF-8">
+    <!-- Настройка viewport для адаптивности -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Все рецепты | Gurman</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Заголовок страницы -->
+    <title>Рецепты - Вкусные рецепты</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- Добавляем DOMPurify для безопасной обработки HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">Gurman</div>
-            <ul class="nav-list">
+    <!-- Шапка сайта -->
+    <header>
+        <!-- Навигационное меню -->
+        <nav>
+            <!-- Список навигации -->
+            <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="recipes.html">Рецепты</a></li>
-                <li><a href="feedback.html">Обратная связь</a></li>
+                <li><a href="about.html">О блоге</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="submit-recipe.html">Добавить рецепт</a></li>
+                <li><a href="404.html">404</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="main recipes-page">
-        <section class="recipes">
-            <h1 class="page-title">Все рецепты</h1>
-            
-            <div class="recipe-grid">
-                <!-- Рецепт 1 -->
-                <a href="cheesecake.html" class="recipe-card">
-                    <article>
-                        <img src="images/cheesecake.png" alt="Нью-Йоркский чизкейк">
-                        <div class="recipe-info">
-                            <h3>Нью-Йоркский чизкейк</h3>
-                            <div class="meta">
-                                <span>🍰 Десерты</span>
-                                <span>⏱ 60 мин</span>
-                            </div>
-                            <p>Нежнейший чизкейк с ягодным соусом</p>
-                        </div>
-                    </article>
-                </a>
+    <!-- Основной контент -->
+    <main>
+        <!-- Заголовок страницы -->
+        <h1>Рецепты</h1>
+        
+        <!-- Поисковая строка -->
+        <div class="search-container">
+            <input type="text" id="recipe-search" placeholder="Поиск рецептов...">
+        </div>
 
-                <!-- Рецепт 2 -->
-                <a href="carbonara.html" class="recipe-card">
-                    <article>
-                        <img src="images/carbonara.jpg" alt="Карбонара">
-                        <div class="recipe-info">
-                            <h3>Карбонара</h3>
-                            <div class="meta">
-                                <span>🍝 Паста</span>
-                                <span>⏱ 30 мин</span>
-                            </div>
-                            <p>Классическая итальянская паста</p>
-                        </div>
-                    </article>
-                </a>
+        <!-- Сетка с рецептами -->
+        <div class="recipes-grid">
+            <!-- Карточка рецепта борща -->
+            <article id="borsch" class="recipe-card">
+                <h2>Борщ классический</h2>
+                <img src="images/borsch.jpg" alt="Борщ" width="400">
+                
+                <table class="recipe-info">
+                    <tr>
+                        <th>Время приготовления</th>
+                        <th>Порций</th>
+                        <th>Сложность</th>
+                    </tr>
+                    <tr>
+                        <td>2 часа</td>
+                        <td>6</td>
+                        <td>Средняя</td>
+                    </tr>
+                </table>
 
-                <!-- Рецепт 3 -->
-                <a href="caesar.html" class="recipe-card">
-                    <article>
-                        <img src="images/caesar.jpg" alt="Салат Цезарь">
-                        <div class="recipe-info">
-                            <h3>Цезарь с курицей</h3>
-                            <div class="meta">
-                                <span>🥗 Салаты</span>
-                                <span>⏱ 20 мин</span>
-                            </div>
-                            <p>Хрустящий салат с домашним соусом</p>
-                        </div>
-                    </article>
-                </a>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>Мясо - 500г</li>
+                    <li>Свекла - 2шт</li>
+                    <li>Капуста - 300г</li>
+                    <li>Картофель - 4шт</li>
+                </ul>
+            </article>
 
-                <!-- добавить ещё -->
-            </div>
-        </section>
+            <!-- Карточка рецепта пасты -->
+            <article id="pasta" class="recipe-card">
+                <h2>Паста Карбонара</h2>
+                <img src="images/carbonara.jpg" alt="Паста Карбонара" width="300">
+                <table class="recipe-info">
+                    <tr>
+                        <th>Время</th>
+                        <th>Порций</th>
+                        <th>Сложность</th>
+                    </tr>
+                    <tr>
+                        <td>30 минут</td>
+                        <td>4</td>
+                        <td>Легкая</td>
+                    </tr>
+                </table>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>Спагетти - 400г</li>
+                    <li>Бекон - 200г</li>
+                    <li>Яйца - 4шт</li>
+                    <li>Пармезан - 100г</li>
+                </ul>
+            </article>
+
+            <!-- Карточка рецепта плова -->
+            <article id="plov" class="recipe-card">
+                <h2>Узбекский плов</h2>
+                <img src="images/plov.jpg" alt="Узбекский плов" width="300">
+                <table class="recipe-info">
+                    <tr>
+                        <th>Время</th>
+                        <th>Порций</th>
+                        <th>Сложность</th>
+                    </tr>
+                    <tr>
+                        <td>2.5 часа</td>
+                        <td>8</td>
+                        <td>Средняя</td>
+                    </tr>
+                </table>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>Рис - 1кг</li>
+                    <li>Баранина - 700г</li>
+                    <li>Морковь - 600г</li>
+                    <li>Лук - 400г</li>
+                </ul>
+            </article>
+
+            <!-- Карточка рецепта салата -->
+            <article id="cesar" class="recipe-card">
+                <h2>Салат Цезарь</h2>
+                <img src="images/caesar.jpg" alt="Салат Цезарь" width="300">
+                <table class="recipe-info">
+                    <tr>
+                        <th>Время</th>
+                        <th>Порций</th>
+                        <th>Сложность</th>
+                    </tr>
+                    <tr>
+                        <td>40 минут</td>
+                        <td>4</td>
+                        <td>Легкая</td>
+                    </tr>
+                </table>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>Куриное филе - 300г</li>
+                    <li>Салат романо - 1шт</li>
+                    <li>Сухарики - 100г</li>
+                    <li>Пармезан - 50г</li>
+                </ul>
+            </article>
+
+            <!-- Карточка рецепта десерта -->
+            <article id="tiramisu" class="recipe-card">
+                <h2>Тирамису</h2>
+                <img src="images/tiramisu.jpg" alt="Тирамису" width="300">
+                <table class="recipe-info">
+                    <tr>
+                        <th>Время</th>
+                        <th>Порций</th>
+                        <th>Сложность</th>
+                    </tr>
+                    <tr>
+                        <td>1 час</td>
+                        <td>6</td>
+                        <td>Средняя</td>
+                    </tr>
+                </table>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>Маскарпоне - 500г</li>
+                    <li>Печенье савоярди - 200г</li>
+                    <li>Кофе - 200мл</li>
+                    <li>Яйца - 3шт</li>
+                </ul>
+            </article>
+
+            <!-- Карточка рецепта суши -->
+            <article id="sushi" class="recipe-card">
+                <h2>Роллы Калифорния</h2>
+                <img src="images/california.jpg" alt="Роллы Калифорния" width="300">
+                <table class="recipe-info">
+                    <tr>
+                        <th>Время</th>
+                        <th>Порций</th>
+                        <th>Сложность</th>
+                    </tr>
+                    <tr>
+                        <td>1.5 часа</td>
+                        <td>4</td>
+                        <td>Сложная</td>
+                    </tr>
+                </table>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>Рис для суши - 400г</li>
+                    <li>Крабовые палочки - 200г</li>
+                    <li>Авокадо - 1шт</li>
+                    <li>Огурец - 1шт</li>
+                </ul>
+            </article>
+        </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>О нас</h4>
-                <p>Мы создаем кулинарные истории, которые вдохновляют</p>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Контакты</h4>
-                <p>email: hello@gurman.ru</p>
-                <p>тел: +7 (999) 123-45-67</p>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Соцсети</h4>
-                <div class="social-links">
-                    <a href="#">📷 Instagram</a>
-                    <a href="#">📌 Pinterest</a>
-                </div>
-            </div>
-        </div>
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2025 Вкусные рецепты. Все права защищены.</p>
     </footer>
+    
+    <!-- Подключение JavaScript -->
+    <script src="js/security.js"></script>
+    <script src="js/main.min.js" defer></script>
 </body>
 </html>
