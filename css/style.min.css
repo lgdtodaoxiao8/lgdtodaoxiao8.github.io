@@ -15,7 +15,7 @@
     /* Тень для карточек и элементов */
     --shadow: 0 2px 5px rgba(0,0,0,.1);
     /* Скругление углов */
-    --radius: 4px;
+    --radius: 8px;
     /* Время анимации */
     --transition: .3s ease;
 }
@@ -27,19 +27,38 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 /* Основные стили для body */
 body {
     font: 16px/1.6 Arial, sans-serif;
     color: var(--text);
-    background: var(--bg);
+    background: var(--bg);    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 /* Стили для основных структурных элементов */
-header, main, footer {
+header, main {
     width: 100%;
     max-width: var(--max-w);
     margin: 0 auto;
     padding: 1rem;
+}
+
+footer {
+    width: 100%;
+    padding: 1rem;
+    flex-shrink: 0;
+    background: var(--white);
+    box-shadow: var(--shadow);
 }
 
 /* Стили для закрепленной шапки сайта */
@@ -86,9 +105,12 @@ nav a:hover {
 article {
     background: var(--white);
     border-radius: var(--radius);
-    padding: 1rem;
+    padding: 2rem;
     box-shadow: var(--shadow);
-    transition: transform var(--transition);
+    transition: transform var(--transition); 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* предотвращает выход контента за границы */
 }
 
 /* Анимация при наведении на карточку */
@@ -96,11 +118,21 @@ article:hover {
     transform: translateY(-5px);
 }
 
-article img{
-    width: 400px;
-    height: 200px;
+article img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    height: auto;
     object-fit: cover;
-    border-radius: var(--radius);
+    border-radius: var(--radius) var(--radius) 0 0;
+    display: block;
+    flex-shrink: 0;
+}
+
+.recipe-card-content {
+    padding: 1rem;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #kitchen {
@@ -170,11 +202,14 @@ li {
 /* Стили для таблиц с характеристиками рецепта */
 .recipe-info {
     width: 100%;
+    max-width: 100%;
     margin: 1rem 0;
     border-collapse: collapse;
     background: var(--bg);
     border-radius: var(--radius);
     overflow: hidden;
+    table-layout: fixed; /* Добавлено: предотвращает переполнение */
+    word-break: break-word; /* Добавлено: переносит длинные слова */
 }
 
 .recipe-info th {
@@ -188,6 +223,7 @@ li {
 .recipe-info td {
     padding: 0.8rem;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    word-break: break-word; /* Добавлено: переносит длинные слова */
 }
 
 .recipe-info tr:last-child td {
