@@ -9,13 +9,14 @@
 <body>
     <header>
         <nav>
+            <div class="logo">ВКУСНОБЛОГ</div>
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="recipes.html">Рецепты</a></li>
                 <li><a href="about.html">О блоге</a></li>
                 <li><a href="contact.html">Контакты</a></li>
                 <li><a href="submit-recipe.html">Добавить рецепт</a></li>
-                <li><a href="404.html">404</a></li>
+                <li class="active"><a href="404.html">404</a></li>
             </ul>
         </nav>
     </header>
@@ -30,5 +31,12 @@
     <footer>
         <p>&copy; 2025 Вкусные рецепты. Все права защищены.</p>
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            if(location.pathname.endsWith(link.getAttribute('href'))) link.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

@@ -19,10 +19,11 @@
     <header>
         <!-- Навигационное меню -->
         <nav>
+            <div class="logo">ВКУСНОБЛОГ</div>
             <!-- Список навигации -->
             <ul>
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="recipes.html">Рецепты</a></li>
+                <li class="active"><a href="recipes.html">Рецепты</a></li>
                 <li><a href="about.html">О блоге</a></li>
                 <li><a href="contact.html">Контакты</a></li>
                 <li><a href="submit-recipe.html">Добавить рецепт</a></li>
@@ -35,166 +36,214 @@
     <main>
         <!-- Заголовок страницы -->
         <h1>Рецепты</h1>
-        
         <!-- Поисковая строка -->
         <div class="search-container">
             <input type="text" id="recipe-search" placeholder="Поиск рецептов...">
         </div>
-
         <!-- Сетка с рецептами -->
         <div class="recipes-grid">
             <!-- Карточка рецепта борща -->
             <article id="borsch" class="recipe-card">
-                <h2>Борщ классический</h2>
                 <img src="images/borsch.jpg" alt="Борщ">
-                
-                <table class="recipe-info">
-                    <tr>
-                        <th>Время приготовления</th>
-                        <th>Порций</th>
-                        <th>Сложность</th>
-                    </tr>
-                    <tr>
-                        <td>2 часа</td>
-                        <td>6</td>
-                        <td>Средняя</td>
-                    </tr>
-                </table>
-
-                <h3>Ингредиенты:</h3>
-                <ul>
-                    <li>Мясо - 500г</li>
-                    <li>Свекла - 2шт</li>
-                    <li>Капуста - 300г</li>
-                    <li>Картофель - 4шт</li>
-                </ul>
+                <div class="recipe-card-content">
+                    <h2>Борщ классический</h2>
+                    <ul>
+                        <li>Мясо</li>
+                        <li>Свекла</li>
+                        <li>Капуста</li>
+                        <li>Картофель</li>
+                    </ul>
+                    <table class="recipe-info">
+                        <tr>
+                            <th>Время приготовления</th>
+                            <th>Порций</th>
+                            <th>Сложность</th>
+                        </tr>
+                        <tr>
+                            <td>2 часа</td>
+                            <td>6</td>
+                            <td>Средняя</td>
+                        </tr>
+                    </table>
+                    <h3>Ингредиенты:</h3>
+                    <ul class="ingredients-list">
+                        <li>Мясо - 500г</li>
+                        <li>Свекла - 2шт</li>
+                        <li>Капуста - 300г</li>
+                        <li>Картофель - 4шт</li>
+                    </ul>
+                </div>
             </article>
 
             <!-- Карточка рецепта пасты -->
             <article id="pasta" class="recipe-card">
-                <h2>Паста Карбонара</h2>
                 <img src="images/carbonara.jpg" alt="Паста Карбонара">
-                <table class="recipe-info">
-                    <tr>
-                        <th>Время</th>
-                        <th>Порций</th>
-                        <th>Сложность</th>
-                    </tr>
-                    <tr>
-                        <td>30 минут</td>
-                        <td>4</td>
-                        <td>Легкая</td>
-                    </tr>
-                </table>
-                <h3>Ингредиенты:</h3>
-                <ul>
-                    <li>Спагетти - 400г</li>
-                    <li>Бекон - 200г</li>
-                    <li>Яйца - 4шт</li>
-                    <li>Пармезан - 100г</li>
-                </ul>
+                <div class="recipe-card-content">
+                    <h2>Паста Карбонара</h2>
+                    <ul>
+                        <li>Спагетти</li>
+                        <li>Бекон</li>
+                        <li>Яйца</li>
+                        <li>Пармезан</li>
+                    </ul>
+                    <table class="recipe-info">
+                        <tr>
+                            <th>Время</th>
+                            <th>Порций</th>
+                            <th>Сложность</th>
+                        </tr>
+                        <tr>
+                            <td>30 минут</td>
+                            <td>4</td>
+                            <td>Легкая</td>
+                        </tr>
+                    </table>
+                    <h3>Ингредиенты:</h3>
+                    <ul class="ingredients-list">
+                        <li>Спагетти - 400г</li>
+                        <li>Бекон - 200г</li>
+                        <li>Яйца - 4шт</li>
+                        <li>Пармезан - 100г</li>
+                    </ul>
+                </div>
             </article>
 
             <!-- Карточка рецепта плова -->
             <article id="plov" class="recipe-card">
-                <h2>Узбекский плов</h2>
                 <img src="images/plov.jpg" alt="Узбекский плов">
-                <table class="recipe-info">
-                    <tr>
-                        <th>Время</th>
-                        <th>Порций</th>
-                        <th>Сложность</th>
-                    </tr>
-                    <tr>
-                        <td>2.5 часа</td>
-                        <td>8</td>
-                        <td>Средняя</td>
-                    </tr>
-                </table>
-                <h3>Ингредиенты:</h3>
-                <ul>
-                    <li>Рис - 1кг</li>
-                    <li>Баранина - 700г</li>
-                    <li>Морковь - 600г</li>
-                    <li>Лук - 400г</li>
-                </ul>
+                <div class="recipe-card-content">
+                    <h2>Узбекский плов</h2>
+                    <ul>
+                        <li>Рис</li>
+                        <li>Баранина</li>
+                        <li>Морковь</li>
+                        <li>Лук</li>
+                    </ul>
+                    <table class="recipe-info">
+                        <tr>
+                            <th>Время</th>
+                            <th>Порций</th>
+                            <th>Сложность</th>
+                        </tr>
+                        <tr>
+                            <td>2.5 часа</td>
+                            <td>8</td>
+                            <td>Средняя</td>
+                        </tr>
+                    </table>
+                    <h3>Ингредиенты:</h3>
+                    <ul class="ingredients-list">
+                        <li>Рис - 1кг</li>
+                        <li>Баранина - 700г</li>
+                        <li>Морковь - 600г</li>
+                        <li>Лук - 400г</li>
+                    </ul>
+                </div>
             </article>
 
             <!-- Карточка рецепта салата -->
             <article id="cesar" class="recipe-card">
-                <h2>Салат Цезарь</h2>
                 <img src="images/caesar.jpg" alt="Салат Цезарь">
-                <table class="recipe-info">
-                    <tr>
-                        <th>Время</th>
-                        <th>Порций</th>
-                        <th>Сложность</th>
-                    </tr>
-                    <tr>
-                        <td>40 минут</td>
-                        <td>4</td>
-                        <td>Легкая</td>
-                    </tr>
-                </table>
-                <h3>Ингредиенты:</h3>
-                <ul>
-                    <li>Куриное филе - 300г</li>
-                    <li>Салат романо - 1шт</li>
-                    <li>Сухарики - 100г</li>
-                    <li>Пармезан - 50г</li>
-                </ul>
+                <div class="recipe-card-content">
+                    <h2>Салат Цезарь</h2>
+                    <ul>
+                        <li>Куриное филе</li>
+                        <li>Салат романо</li>
+                        <li>Сухарики</li>
+                        <li>Пармезан</li>
+                    </ul>
+                    <table class="recipe-info">
+                        <tr>
+                            <th>Время</th>
+                            <th>Порций</th>
+                            <th>Сложность</th>
+                        </tr>
+                        <tr>
+                            <td>40 минут</td>
+                            <td>4</td>
+                            <td>Легкая</td>
+                        </tr>
+                    </table>
+                    <h3>Ингредиенты:</h3>
+                    <ul class="ingredients-list">
+                        <li>Куриное филе - 300г</li>
+                        <li>Салат романо - 1шт</li>
+                        <li>Сухарики - 100г</li>
+                        <li>Пармезан - 50г</li>
+                    </ul>
+                </div>
             </article>
 
             <!-- Карточка рецепта десерта -->
             <article id="tiramisu" class="recipe-card">
-                <h2>Тирамису</h2>
                 <img src="images/tiramisu.jpg" alt="Тирамису">
-                <table class="recipe-info">
-                    <tr>
-                        <th>Время</th>
-                        <th>Порций</th>
-                        <th>Сложность</th>
-                    </tr>
-                    <tr>
-                        <td>1 час</td>
-                        <td>6</td>
-                        <td>Средняя</td>
-                    </tr>
-                </table>
-                <h3>Ингредиенты:</h3>
-                <ul>
-                    <li>Маскарпоне - 500г</li>
-                    <li>Печенье савоярди - 200г</li>
-                    <li>Кофе - 200мл</li>
-                    <li>Яйца - 3шт</li>
-                </ul>
+                <div class="recipe-card-content">
+                    <h2>Тирамису</h2>
+                    <ul>
+                        <li>Маскарпоне</li>
+                        <li>Печенье савоярди</li>
+                        <li>Кофе</li>
+                        <li>Яйца</li>
+                    </ul>
+                    <table class="recipe-info">
+                        <tr>
+                            <th>Время</th>
+                            <th>Порций</th>
+                            <th>Сложность</th>
+                        </tr>
+                        <tr>
+                            <td>1 час</td>
+                            <td>6</td>
+                            <td>Средняя</td>
+                        </tr>
+                    </table>
+                    <h3>Ингредиенты:</h3>
+                    <ul class="ingredients-list">
+                        <li>Маскарпоне - 500г</li>
+                        <li>Печенье савоярди - 200г</li>
+                        <li>Кофе - 200мл</li>
+                        <li>Яйца - 3шт</li>
+                    </ul>
+                </div>
             </article>
 
             <!-- Карточка рецепта суши -->
             <article id="sushi" class="recipe-card">
-                <h2>Роллы Калифорния</h2>
                 <img src="images/california.jpg" alt="Роллы Калифорния">
-                <table class="recipe-info">
-                    <tr>
-                        <th>Время</th>
-                        <th>Порций</th>
-                        <th>Сложность</th>
-                    </tr>
-                    <tr>
-                        <td>1.5 часа</td>
-                        <td>4</td>
-                        <td>Сложная</td>
-                    </tr>
-                </table>
-                <h3>Ингредиенты:</h3>
-                <ul>
-                    <li>Рис для суши - 400г</li>
-                    <li>Крабовые палочки - 200г</li>
-                    <li>Авокадо - 1шт</li>
-                    <li>Огурец - 1шт</li>
-                </ul>
+                <div class="recipe-card-content">
+                    <h2>Роллы Калифорния</h2>
+                    <ul>
+                        <li>Рис для суши</li>
+                        <li>Крабовые палочки</li>
+                        <li>Авокадо</li>
+                        <li>Огурец</li>
+                    </ul>
+                    <table class="recipe-info">
+                        <tr>
+                            <th>Время</th>
+                            <th>Порций</th>
+                            <th>Сложность</th>
+                        </tr>
+                        <tr>
+                            <td>1.5 часа</td>
+                            <td>4</td>
+                            <td>Сложная</td>
+                        </tr>
+                    </table>
+                    <h3>Ингредиенты:</h3>
+                    <ul class="ingredients-list">
+                        <li>Рис для суши - 400г</li>
+                        <li>Крабовые палочки - 200г</li>
+                        <li>Авокадо - 1шт</li>
+                        <li>Огурец - 1шт</li>
+                    </ul>
+                </div>
             </article>
         </div>
+        <section class="chart-container">
+            <h2>Популярность рецептов</h2>
+            <canvas id="recipesChart" width="400" height="200"></canvas>
+        </section>
     </main>
 
     <!-- Подвал сайта -->
@@ -205,5 +254,30 @@
     <!-- Подключение JavaScript -->
     <script src="js/security.js"></script>
     <script src="js/main.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('recipesChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Борщ', 'Карбонара', 'Плов', 'Цезарь', 'Тирамису', 'Калифорния'],
+                datasets: [{
+                    label: 'Просмотры',
+                    data: [120, 90, 80, 70, 60, 50],
+                    backgroundColor: ['#ff6b6b','#4ecdc4','#ffd166','#a29bfe','#00b894','#fd79a8']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {legend: {display: false}},
+                scales: {y: {beginAtZero: true}}
+            }
+        });
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            if(location.pathname.endsWith(link.getAttribute('href'))) link.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

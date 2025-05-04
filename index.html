@@ -28,10 +28,11 @@
     <header>
         <!-- Навигационное меню -->
         <nav>
+            <div class="logo">ВКУСНОБЛОГ</div>
             <!-- Список пунктов меню -->
             <ul>
                 <!-- Ссылка на главную страницу -->
-                <li><a href="index.html">Главная</a></li>
+                <li class="active"><a href="index.html">Главная</a></li>
                 <!-- Ссылка на страницу с рецептами -->
                 <li><a href="recipes.html">Рецепты</a></li>
                 <!-- Ссылка на страницу о блоге -->
@@ -48,41 +49,57 @@
 
     <!-- Основной контент страницы -->
     <main>
-        <!-- Заголовок первого уровня -->
         <h1>Добро пожаловать в мой кулинарный блог!</h1>
-        
         <!-- Секция с последними рецептами -->
         <section>
-            <!-- Подзаголовок секции -->
             <h2>Последние рецепты</h2>
             <!-- Сетка для отображения рецептов -->
             <div class="recipes-grid">
                 <!-- Карточка рецепта борща -->
                 <article class="recipe-card">
-                    <!-- Название рецепта -->
-                    <h3>Борщ классический</h3>
                     <!-- Изображение блюда -->
                     <img src="images/borsch.jpg" alt="Борщ">
-                    <!-- Краткое описание -->
-                    <p>Вкусный домашний борщ по классическому рецепту...</p>
-                    <!-- Ссылка на полный рецепт -->
-                    <a href="recipes.html#borsch">Читать далее</a>
+                    <div class="recipe-card-content">
+                        <!-- Название рецепта -->
+                        <h3>Борщ классический</h3>
+                        <ul class="ingredients-list">
+                            <li>Свекла</li>
+                            <li>Капуста</li>
+                            <li>Картофель</li>
+                        </ul>
+                        <!-- Краткое описание -->
+                        <p>Вкусный домашний борщ по классическому рецепту...</p>
+                        <!-- Ссылка на полный рецепт -->
+                        <a href="recipes.html#borsch">Читать далее</a>
+                    </div>
                 </article>
-
                 <!-- Карточка рецепта карбонары -->
                 <article class="recipe-card">
-                    <h3>Паста Карбонара</h3>
                     <img src="images/carbonara.jpg" alt="Паста Карбонара">
-                    <p>Настоящая итальянская паста с беконом и сливочным соусом...</p>
-                    <a href="recipes.html#pasta">Читать далее</a>
+                    <div class="recipe-card-content">
+                        <h3>Паста Карбонара</h3>
+                        <ul class="ingredients-list">
+                            <li>Спагетти</li>
+                            <li>Бекон</li>
+                            <li>Пармезан</li>
+                        </ul>
+                        <p>Настоящая итальянская паста с беконом и сливочным соусом...</p>
+                        <a href="recipes.html#pasta">Читать далее</a>
+                    </div>
                 </article>
-
                 <!-- Карточка рецепта цезаря -->
                 <article class="recipe-card">
-                    <h3>Салат Цезарь</h3>
                     <img src="images/caesar.jpg" alt="Салат Цезарь">
-                    <p>Популярный салат с курицей, сухариками и соусом...</p>
-                    <a href="recipes.html#cesar">Читать далее</a>
+                    <div class="recipe-card-content">
+                        <h3>Салат Цезарь</h3>
+                        <ul class="ingredients-list">
+                            <li>Курица</li>
+                            <li>Сухарики</li>
+                            <li>Пармезан</li>
+                        </ul>
+                        <p>Популярный салат с курицей, сухариками и соусом...</p>
+                        <a href="recipes.html#cesar">Читать далее</a>
+                    </div>
                 </article>
             </div>
         </section>
@@ -96,5 +113,7 @@
     <script src="js/security.js"></script>
     <!-- Подключение минифицированного JavaScript с отложенной загрузкой -->
     <script src="js/main.min.js" defer></script>
+    <script>
+    </script>
 </body>
 </html>

@@ -70,12 +70,34 @@ header {
     box-shadow: var(--shadow);
 }
 
+/* Стили для логотипа */
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+}
+
 /* Стили для навигационного меню */
 nav ul {
     display: flex;
     justify-content: center;
     gap: 1rem;
     list-style: none;
+    align-items: center;
+}
+
+/* Стили для активного пункта меню */
+nav .active > a,
+nav a.active {
+    background: var(--primary);
+    color: var(--white);
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255,107,107,0.15);
 }
 
 /* Стили для ссылок в навигации */
@@ -255,8 +277,18 @@ li {
     margin-top: 20px;
 }
 
-.back-button:hover {
+back-button:hover {
     background: #ff5252;
+}
+
+/* Стили для блока с графиком */
+.chart-container {
+    margin: 2rem auto;
+    max-width: 600px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
 }
 
 /* Адаптивный дизайн для планшетов */
@@ -269,10 +301,37 @@ li {
     .recipes-grid {
         grid-template-columns: 1fr;
     }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .chart-container {
+        max-width: 100%;
+    }
 }
 
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 480px) {
     body { font-size: 14px }
     main { margin: 1rem auto }
+}
+
+/* Стили для списков ингредиентов */
+.ingredients-list {
+    list-style: none;
+    padding-left: 1.5em;
+}
+.ingredients-list li {
+    position: relative;
+    margin-bottom: .5em;
+    padding-left: 1.2em;
+}
+.ingredients-list li::before {
+    content: "🍴 ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1em;
+    line-height: 1;
 }
