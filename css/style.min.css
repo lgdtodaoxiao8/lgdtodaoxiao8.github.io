@@ -319,7 +319,19 @@ back-button:hover {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
     }
-    
+}
+
+/* Добавлено для очень узких экранов */
+@media (max-width: 280px) {
+    html, body { font-size: 10px; }
+    .logo { font-size: 1.1rem; }
+    header, main { padding: 0.3rem; }
+    .recipes-grid { gap: 0.5rem; padding: 0.5rem 0; }
+    .recipe-card-content { padding: 0.5rem; }
+    nav a { padding: .3rem .5rem; font-size: 0.9em; }
+    .chart-container { padding: 0.3rem; }
+    h1, h2, h3 { font-size: 1.1em; margin-bottom: 0.5rem; }
+    .back-button { padding: 6px 10px; font-size: 0.9em; }
 }
 
 /* Стили для списков ингредиентов */
