@@ -127,7 +127,7 @@ nav a:hover {
 article {
     background: var(--white);
     border-radius: var(--radius);
-    padding: 2rem;
+    /* padding: 0rem; */
     box-shadow: var(--shadow);
     transition: transform var(--transition); 
     display: flex;
@@ -313,8 +313,13 @@ back-button:hover {
 
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 480px) {
-    body { font-size: 14px }
-    main { margin: 1rem auto }
+    body { font-size: 12px }
+    main { margin: 0.5rem auto }
+    .logo{
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
 }
 
 /* Стили для списков ингредиентов */
