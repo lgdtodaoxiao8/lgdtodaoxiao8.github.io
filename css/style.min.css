@@ -127,7 +127,6 @@ nav a:hover {
 article {
     background: var(--white);
     border-radius: var(--radius);
-    /* padding: 0rem; */
     box-shadow: var(--shadow);
     transition: transform var(--transition); 
     display: flex;

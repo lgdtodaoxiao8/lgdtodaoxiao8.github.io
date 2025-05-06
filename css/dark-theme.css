@@ -1,0 +1,33 @@
+:root {
+    --primary: #ff6b6b;
+    --secondary: #4ecdc4;
+    --text: #f1f2f6;
+    --bg: #23272f;
+    --white: #23272f;
+    --shadow: 0 2px 8px rgba(0,0,0,.5);
+}
+body, main, header, footer {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+}
+nav, .chart-container, .recipe-card-content, article, .recipes-grid, .recipe-info, .error-page, .back-button, form, input, textarea, select, button {
+    background: var(--white) !important;
+    color: var(--text) !important;
+}
+nav a, nav .active > a, nav a.active {
+    color: var(--text) !important;
+}
+nav a:hover, nav .active > a, nav a.active {
+    background: var(--primary) !important;
+    color: var(--white) !important;
+}
+h1, h2, h3 {
+    color: var(--primary) !important;
+}
+button, .back-button {
+    background: var(--primary) !important;
+    color: var(--white) !important;
+}
+.error-message {
+    color: #ff5252 !important;
+}

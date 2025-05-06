@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Страница не найдена</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/dark-theme.css" id="dark-theme-css" disabled>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">ВКУСНОБЛОГ</div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">🌙</button>
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="recipes.html">Рецепты</a></li>
@@ -32,6 +34,20 @@
         <p>&copy; 2025 Вкусные рецепты. Все права защищены.</p>
     </footer>
     <script>
+    (function() {
+        const btn = document.getElementById('theme-toggle');
+        const darkCss = document.getElementById('dark-theme-css');
+        function setTheme(dark) {
+            darkCss.disabled = !dark;
+            btn.textContent = dark ? '☀️' : '🌙';
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+        }
+        const dark = localStorage.getItem('theme') === 'dark';
+        setTheme(dark);
+        btn.onclick = function() {
+            setTheme(darkCss.disabled);
+        };
+    })();
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('nav ul li a').forEach(link => {
             if(location.pathname.endsWith(link.getAttribute('href'))) link.classList.add('active');

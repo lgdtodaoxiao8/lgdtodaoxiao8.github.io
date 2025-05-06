@@ -12,6 +12,7 @@
     <title>Вкусные рецепты - кулинарный блог</title>
     <!-- Подключаем минифицированный CSS файл -->
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/dark-theme.css" id="dark-theme-css" disabled>
     <!-- Устанавливаем политику безопасности контента -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'">
     <!-- Защита от MIME-sniffing -->
@@ -29,6 +30,7 @@
         <!-- Навигационное меню -->
         <nav>
             <div class="logo">ВКУСНОБЛОГ</div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">🌙</button>
             <!-- Список пунктов меню -->
             <ul>
                 <!-- Ссылка на главную страницу -->
@@ -114,6 +116,21 @@
     <!-- Подключение минифицированного JavaScript с отложенной загрузкой -->
     <script src="js/main.min.js" defer></script>
     <script>
+    (function() {
+        const btn = document.getElementById('theme-toggle');
+        const darkCss = document.getElementById('dark-theme-css');
+        function setTheme(dark) {
+            darkCss.disabled = !dark;
+            btn.textContent = dark ? '☀️' : '🌙';
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+        }
+        // Инициализация
+        const dark = localStorage.getItem('theme') === 'dark';
+        setTheme(dark);
+        btn.onclick = function() {
+            setTheme(darkCss.disabled);
+        };
+    })();
     </script>
 </body>
 </html>
