@@ -63,20 +63,6 @@
     <script src="js/security.js"></script>
     <script src="js/main.min.js" defer></script>
     <script>
-    (function() {
-        const btn = document.getElementById('theme-toggle');
-        const darkCss = document.getElementById('dark-theme-css');
-        function setTheme(dark) {
-            darkCss.disabled = !dark;
-            btn.textContent = dark ? '☀️' : '🌙';
-            localStorage.setItem('theme', dark ? 'dark' : 'light');
-        }
-        const dark = localStorage.getItem('theme') === 'dark';
-        setTheme(dark);
-        btn.onclick = function() {
-            setTheme(darkCss.disabled);
-        };
-    })();
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('nav ul li a').forEach(link => {
             if(location.pathname.endsWith(link.getAttribute('href'))) link.classList.add('active');
